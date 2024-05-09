@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class StateMachine : Node
 {
@@ -8,28 +9,20 @@ public partial class StateMachine : Node
 
     public override void _Ready()
     {
-        currentState.Notification(5001);
+        currentState.Notification(GameGonstants.NOTIFICATION_ENTER_STATE);
     }
 
     public void SwitchState<T>(){
-        Node newState = null;
-
-        foreach (Node state in states)
-        {
-            if (state is T)
-            {
-                newState = state;
-            }
-        }
+        Node newState = states.Where((state) => state is T).FirstOrDefault();
 
         if (newState == null)   
         {
             return;
         }
 
-        currentState.Notification(5002);
+        currentState.Notification(GameGonstants.NOTIFICATION_EXIT_STATE);
         currentState = newState;
-        currentState.Notification(5001);
+        currentState.Notification(GameGonstants.NOTIFICATION_ENTER_STATE);
 
     }
 }

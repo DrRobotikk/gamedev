@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://rn8b0efps5e8"]
+
+[ext_resource type="PackedScene" uid="uid://d0gvn8lvcxftq" path="res://Assets/Models/Dungeon/gltf/floor_tile_small.gltf.glb" id="1_t42v4"]
+[ext_resource type="PackedScene" uid="uid://d38ma2pljqjwk" path="res://Assets/Models/Dungeon/gltf/wall.gltf.glb" id="2_ait46"]
+[ext_resource type="PackedScene" uid="uid://dugau0uot6i2k" path="res://Assets/Models/Dungeon/gltf/wall_corner.gltf.glb" id="3_yunvl"]
+[ext_resource type="PackedScene" uid="uid://p8flu3otlyvv" path="res://Assets/Models/Dungeon/gltf/wall_Tsplit.gltf.glb" id="4_or0jq"]
+[ext_resource type="PackedScene" uid="uid://diojkdlmlp7mo" path="res://Assets/Models/Dungeon/gltf/wall_open_scaffold.gltf.glb" id="5_k55ew"]
+[ext_resource type="PackedScene" uid="uid://bs22h8pcvoequ" path="res://Assets/Models/Dungeon/gltf/wall_doorway_scaffold.glb" id="6_r5aq5"]
+[ext_resource type="PackedScene" uid="uid://djy6kbxc03clh" path="res://Assets/Models/Dungeon/gltf/stairs_wood_decorated.gltf.glb" id="7_xtlfx"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="floor_tile_small_gltf" parent="." instance=ExtResource("1_t42v4")]
+
+[node name="wall_gltf" parent="." instance=ExtResource("2_ait46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60012, 0, -0.255445)
+
+[node name="wall_corner_gltf" parent="." instance=ExtResource("3_yunvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9893, 0, 0)
+
+[node name="wall_Tsplit_gltf" parent="." instance=ExtResource("4_or0jq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4517, 0, 0)
+
+[node name="wall_open_scaffold_gltf" parent="." instance=ExtResource("5_k55ew")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.03241)
+
+[node name="wall_doorway_scaffold2" parent="." instance=ExtResource("6_r5aq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9926, 0, 0)
+
+[node name="stairs_wood_decorated_gltf" parent="." instance=ExtResource("7_xtlfx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.40461, 0)
